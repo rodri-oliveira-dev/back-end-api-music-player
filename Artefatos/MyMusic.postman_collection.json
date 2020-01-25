@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "ded5e95f-919d-4539-83dd-b8fdd974e115",
+		"name": "MyMusic",
+		"description": "Lista de chamadas de API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pesquisa de musicas com retorno",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44382/api/musica/mind",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44382",
+					"path": [
+						"api",
+						"musica",
+						"mind"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pesquisa de musica sem retorno",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44382/api/musica/palmer",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44382",
+					"path": [
+						"api",
+						"musica",
+						"palmer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recupera musicas da cache de pesquisas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44382/api/musica/GetCached/mind",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44382",
+					"path": [
+						"api",
+						"musica",
+						"GetCached",
+						"mind"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tenta recuperar musicas da cache",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44382/api/musica/GetCached/naoexiste",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44382",
+					"path": [
+						"api",
+						"musica",
+						"GetCached",
+						"naoexiste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retorna Playlist usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44383/api/playlist/wo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44383",
+					"path": [
+						"api",
+						"playlist",
+						"wo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Não encontra playlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44383/api/playlist/naoexiste",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44383",
+					"path": [
+						"api",
+						"playlist",
+						"naoexiste"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adiciona musica PlayList",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": \"dc86d3f6-9b18-439a-9896-804156f43889\",\r\n        \"nome\": \"Didn't I (Blow Your Mind This Time)\",\r\n        \"artistaId\": \"7b1a3d82-b8d5-4a5e-8b3b-ac9108dcf409\",\r\n        \"artista\": {\r\n            \"id\": \"7b1a3d82-b8d5-4a5e-8b3b-ac9108dcf409\",\r\n            \"nome\": \"Aretha Franklin\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44383/api/playlist/AddMusica/b54c99b2-1816-47d3-b41c-9f1d070462ab",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44383",
+					"path": [
+						"api",
+						"playlist",
+						"AddMusica",
+						"b54c99b2-1816-47d3-b41c-9f1d070462ab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove musica da playList",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": \"dc86d3f6-9b18-439a-9896-804156f43889\",\r\n        \"nome\": \"Didn't I (Blow Your Mind This Time)\",\r\n        \"artistaId\": \"7b1a3d82-b8d5-4a5e-8b3b-ac9108dcf409\",\r\n        \"artista\": {\r\n            \"id\": \"7b1a3d82-b8d5-4a5e-8b3b-ac9108dcf409\",\r\n            \"nome\": \"Aretha Franklin\"\r\n        }\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44383/api/playlist/RemoveMusica/b54c99b2-1816-47d3-b41c-9f1d070462ab",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44383",
+					"path": [
+						"api",
+						"playlist",
+						"RemoveMusica",
+						"b54c99b2-1816-47d3-b41c-9f1d070462ab"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
